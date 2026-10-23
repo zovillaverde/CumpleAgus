@@ -1,0 +1,88 @@
+h1 {
+                font-size: 22px
+            }
+h2, h3 {
+                font-size: 18px;
+            }
+h1 {
+                text-align: center;
+        }
+
+h2, h3 {
+                text-align: left;
+            }
+            body {
+                background-color: #EFEDFF;
+                color: #674182;
+                font-family: Arial, sans-serif;}
+
+                .imagen-que-cae {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+
+                    position: fixed;
+                    top: -120px;
+
+                    animation: caer 12s linear infinite;
+                    z-index: 0;
+
+                    pointer-events: none;
+        
+                }
+@keyframes caer {
+        from { 
+            transform: translate(-50%, 0);
+    }
+        to {
+            transform: translate(-50%, calc(100vh + 120px));
+        }
+    }
+/* Cada copia tiene su posición, duración y punto de inicio. */
+.estrella-1 {
+    left: 10%;
+    animation-delay: -2s;
+}
+
+.estrella-2 {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: -9s;
+}
+
+.estrella-3 {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: -5s;
+}
+
+.estrella-4 {
+    left: 70%;
+    animation-duration: 6s;
+    animation-delay: -13s;
+}
+
+.estrella-5 {
+    left: 90%;
+    animation-duration: 4s;
+    animation-delay: -7s;
+}
+
+.contenido {
+    position: relative;
+    z-index: 1;}
+
+.fila-fotos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fila-fotos .foto {
+    width: 500px;
+    max-width: calc((100% - 40px) / 3);
+    height: auto;
+    min-width: 0;
+    margin: 0;
+    object-fit: contain;
+}
